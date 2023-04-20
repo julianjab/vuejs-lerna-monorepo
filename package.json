@@ -11,7 +11,7 @@
     "test": "lerna exec -- npm run test",
     "lint": "lerna exec -- npm run lint",
     "pre:release": "lerna version --yes --conventional-prerelease --no-changelog --no-git-tag-version",
-    "release": "lerna version --yes --create-release github --allow-branch main  --message \"chore: release\""
+    "release": "lerna version --yes --conventional-graduate --create-release github --allow-branch main  --message \"chore: release\""
   },
   "repository": {
     "type": "git",
