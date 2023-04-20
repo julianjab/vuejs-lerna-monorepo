@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/julianjab/vuejs-lerna-monorepo/compare/admin@0.2.0...admin@0.2.1) (2023-04-20)
+
+**Note:** Version bump only for package admin
+
+
+
+
+
 # [0.2.0](https://github.com/julianjab/vuejs-lerna-monorepo/compare/admin@0.1.4...admin@0.2.0) (2023-04-20)
 
 
