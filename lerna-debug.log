@@ -2,8 +2,6 @@
 0 silly argv   _: [ 'version' ],
 0 silly argv   yes: true,
 0 silly argv   y: true,
-0 silly argv   'conventional-graduate': true,
-0 silly argv   conventionalGraduate: true,
 0 silly argv   'create-release': 'github',
 0 silly argv   createRelease: 'github',
 0 silly argv   'allow-branch': [ 'main' ],
@@ -26,18 +24,77 @@
 11 silly isBehindUpstream main is behind origin/main by 0 commit(s) and ahead by 0
 12 silly hasTags
 13 verbose hasTags false
-14 warn conventional-graduate all packages
-15 info Graduating all prereleased packages
-16 info Looking for changed packages since undefined
-17 silly checking diff modules/admin
-18 error Error: Command failed with exit code 128: git diff --name-only  -- modules/admin
-18 error fatal: bad revision 'undefined'
-18 error     at makeError (/Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/node_modules/@lerna/child-process/node_modules/execa/lib/error.js:60:11)
-18 error     at module.exports.sync (/Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/node_modules/@lerna/child-process/node_modules/execa/index.js:194:17)
-18 error     at Object.execSync (/Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/node_modules/@lerna/child-process/index.js:39:16)
-18 error     at diffSinceIn (/Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/node_modules/lerna/dist/cli.js:401:24)
-18 error     at hasDiffSinceThatIsntIgnored (/Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/node_modules/lerna/dist/cli.js:374:18)
-18 error     at isCandidate (/Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/node_modules/lerna/dist/cli.js:467:77)
-18 error     at /Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/node_modules/lerna/dist/cli.js:294:9
-18 error     at PackageGraph.forEach (<anonymous>)
-18 error     at collectPackages (/Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/node_modules/lerna/dist/cli.js:293:12)
+14 info Assuming all packages changed
+15 verbose updated admin
+16 verbose updated shared
+17 verbose git-describe undefined => "c0c8af1"
+18 silly git-describe parsed => {"refCount":"4","sha":"c0c8af1","isDirty":false}
+19 silly independent for admin at /Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/modules/admin
+20 verbose getChangelogConfig using preset "conventional-changelog-angular"
+21 silly npa Result {
+21 silly npa   type: 'tag',
+21 silly npa   registry: true,
+21 silly npa   where: undefined,
+21 silly npa   raw: 'conventional-changelog-angular',
+21 silly npa   name: 'conventional-changelog-angular',
+21 silly npa   escapedName: 'conventional-changelog-angular',
+21 silly npa   scope: undefined,
+21 silly npa   rawSpec: '',
+21 silly npa   saveSpec: null,
+21 silly npa   fetchSpec: 'latest',
+21 silly npa   gitRange: undefined,
+21 silly npa   gitCommittish: undefined,
+21 silly npa   hosted: undefined
+21 silly npa }
+22 verbose getChangelogConfig Attempting to resolve preset "conventional-changelog-angular"
+23 info getChangelogConfig Successfully resolved preset "conventional-changelog-angular"
+24 verbose independent increment 0.1.1 by patch
+25 silly independent for shared at /Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/modules/shared
+26 verbose independent increment 0.1.1 by patch
+27 info auto-confirmed
+28 info execute Creating releases...
+29 silly lifecycle No script for "preversion" in "monorepo", continuing
+30 silly lifecycle No script for "preversion" in "shared", continuing
+31 silly lifecycle No script for "version" in "shared", continuing
+32 silly independent for shared at /Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/modules/shared
+33 silly independent writing new entry: "## 0.1.2 (2023-04-20)\n\n**Note:** Version bump only for package shared\n\n\n\n"
+34 verbose independent wrote /Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/modules/shared/CHANGELOG.md
+35 silly lifecycle No script for "preversion" in "admin", continuing
+36 silly lifecycle No script for "version" in "admin", continuing
+37 silly independent for admin at /Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/modules/admin
+38 silly independent writing new entry: "## 0.1.2 (2023-04-20)\n\n**Note:** Version bump only for package admin\n\n\n\n"
+39 verbose independent wrote /Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/modules/admin/CHANGELOG.md
+40 verbose version Updating root package-lock.json
+41 silly lifecycle No script for "version" in "monorepo", continuing
+42 silly gitAdd [
+42 silly gitAdd   'modules/shared/package.json',
+42 silly gitAdd   'modules/shared/package-lock.json',
+42 silly gitAdd   'modules/shared/CHANGELOG.md',
+42 silly gitAdd   'modules/admin/package.json',
+42 silly gitAdd   'modules/admin/package-lock.json',
+42 silly gitAdd   'modules/admin/CHANGELOG.md',
+42 silly gitAdd   'package-lock.json'
+42 silly gitAdd ]
+43 silly gitCommit chore: release
+43 silly gitCommit
+43 silly gitCommit  - admin@0.1.2
+43 silly gitCommit  - shared@0.1.2
+44 verbose git [
+44 verbose git   'commit',
+44 verbose git   '-F',
+44 verbose git   '/private/var/folders/b5/vnb5ydcj54l5176hg8flp1yh0000gp/T/d650f913-b0b4-491c-a508-a05d404b17cd/lerna-commit.txt'
+44 verbose git ]
+45 silly gitTag admin@0.1.2 git tag %s -m %s
+46 verbose git [ 'tag', 'admin@0.1.2', '-m', 'admin@0.1.2' ]
+47 silly gitTag shared@0.1.2 git tag %s -m %s
+48 verbose git [ 'tag', 'shared@0.1.2', '-m', 'shared@0.1.2' ]
+49 silly lifecycle No script for "postversion" in "admin", continuing
+50 silly lifecycle No script for "postversion" in "shared", continuing
+51 silly lifecycle No script for "postversion" in "monorepo", continuing
+52 info git Pushing tags...
+53 silly gitPush origin main
+54 silly parseGitRepo
+55 verbose git [ 'config', '--get', 'remote.origin.url' ]
+56 error HttpError: Bad credentials
+56 error     at /Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/node_modules/@octokit/request/dist-node/index.js:78:21
+56 error     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
