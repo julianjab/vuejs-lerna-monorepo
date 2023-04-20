@@ -6,10 +6,12 @@
   "scripts": {
     "postinstall": "lerna bootstrap",
     "admin": "cd ./modules/admin && npm run serve",
-    "admin:build": "cd ./modules/admin && npm run build",
-    "admin:test": "cd ./modules/admin && npm run test",
+    "admin:build": "lerna run build",
+    "admin:test": "lerna run test",
     "test": "lerna exec -- npm run test",
-    "lint": "lerna exec -- npm run lint"
+    "lint": "lerna exec -- npm run lint",
+    "pre:release": "lerna version --yes --conventional-prerelease --no-changelog --no-git-tag-version",
+    "release": "lerna version --yes --create-release github --allow-branch main  --message \"chore: release\""
   },
   "repository": {
     "type": "git",
@@ -30,6 +32,9 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^7.26.0",
     "eslint-plugin-vue": "^7.9.0",
-    "lerna": "^4.0.0"
+    "lerna": "^6.5.1"
+  },
+  "dependencies": {
+    "conventional-changelog-cli": "^2.2.2"
   }
 }

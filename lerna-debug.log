@@ -1,0 +1,43 @@
+0 silly argv {
+0 silly argv   _: [ 'version' ],
+0 silly argv   yes: true,
+0 silly argv   y: true,
+0 silly argv   'conventional-graduate': true,
+0 silly argv   conventionalGraduate: true,
+0 silly argv   'create-release': 'github',
+0 silly argv   createRelease: 'github',
+0 silly argv   'allow-branch': [ 'main' ],
+0 silly argv   allowBranch: [ 'main' ],
+0 silly argv   message: 'chore: release',
+0 silly argv   m: 'chore: release',
+0 silly argv   lernaVersion: '6.6.1',
+0 silly argv   '$0': '/Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/node_modules/.bin/lerna'
+0 silly argv }
+1 notice cli v6.6.1
+2 verbose rootPath /Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo
+3 silly createGitHubClient
+4 info versioning independent
+5 silly isAnythingCommitted
+6 verbose isAnythingCommitted 1
+7 silly getCurrentBranch
+8 verbose currentBranch main
+9 silly remoteBranchExists
+10 silly isBehindUpstream
+11 silly isBehindUpstream main is behind origin/main by 0 commit(s) and ahead by 0
+12 silly hasTags
+13 verbose hasTags false
+14 warn conventional-graduate all packages
+15 info Graduating all prereleased packages
+16 info Looking for changed packages since undefined
+17 silly checking diff modules/admin
+18 error Error: Command failed with exit code 128: git diff --name-only  -- modules/admin
+18 error fatal: bad revision 'undefined'
+18 error     at makeError (/Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/node_modules/@lerna/child-process/node_modules/execa/lib/error.js:60:11)
+18 error     at module.exports.sync (/Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/node_modules/@lerna/child-process/node_modules/execa/index.js:194:17)
+18 error     at Object.execSync (/Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/node_modules/@lerna/child-process/index.js:39:16)
+18 error     at diffSinceIn (/Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/node_modules/lerna/dist/cli.js:401:24)
+18 error     at hasDiffSinceThatIsntIgnored (/Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/node_modules/lerna/dist/cli.js:374:18)
+18 error     at isCandidate (/Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/node_modules/lerna/dist/cli.js:467:77)
+18 error     at /Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/node_modules/lerna/dist/cli.js:294:9
+18 error     at PackageGraph.forEach (<anonymous>)
+18 error     at collectPackages (/Users/julianandresbuitrago/development/jab/frontend/vuejs-lerna-monorepo/node_modules/lerna/dist/cli.js:293:12)

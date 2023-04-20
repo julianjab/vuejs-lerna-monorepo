@@ -1,6 +1,10 @@
 {
-    "packages": [
-      "modules/*"
-    ],
-    "version": "independent"
+  "packages": ["modules/*"],
+  "version": "independent",
+  "command": {
+    "version": {
+      "conventionalCommits": true,
+      "exact": true
+    }
   }
+}
