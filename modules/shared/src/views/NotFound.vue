@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: 'NotFoundViewCambio'
+  name: 'NotFoundViewCambioOtro'
 }
 </script>
